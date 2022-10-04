@@ -1,0 +1,28 @@
+{
+  "name": "teachTech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristinaStarr19/teachTech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristinaStarr19/teachTech/issues"
+  },
+  "homepage": "https://github.com/ChristinaStarr19/teachTech#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^6.6.4",
+    "path": "^0.12.7"
+  }
+}
