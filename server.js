@@ -18,8 +18,23 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // API routes
-app.use(routes);
+// app.use(routes);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+//Connect to Mongo DB
+mongoose
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/teachTech")
+  .then(() => {
+    console.log("Successfully connected to the database.");
+  })
+  .catch((err) => {
+    console.log("Unable to connect to the database.");
+    console.log(err);
+  });
+
+app.listen(PORT, function () {
+  console.log(`Express server is running on http://localhost:${PORT}!`);
 });
