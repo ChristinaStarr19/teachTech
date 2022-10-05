@@ -8,7 +8,11 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +26,7 @@
   },
   "homepage": "https://github.com/ChristinaStarr19/teachTech#readme",
   "dependencies": {
+    "concurrently": "^7.4.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "if-env": "^1.0.4",
